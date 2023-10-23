@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Raining Effect</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #rain-container {
+      background-color: gray;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+#baadal{
+  height:max-content;
+  width: max-content;
+}
+    .rain {
+      position: absolute;
+      width: 1px;
+      height: 10px;
+      background-color: blue;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px);
+      }
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="rain-container"> </div>
+<img id="baadal" src="cloud.png"></img>
+  <script>
+    function createRaindrops() {
+      const rainContainer = document.getElementById("rain-container");
+      const numDrops = 50;
+
+      for (let i = 0; i < numDrops; i++) {
+        const drop = document.createElement("div");
+        drop.className = "rain";
+        drop.style.left = `${Math.random() * 100}%`;
+        drop.style.animationDelay = `${Math.random() * 5}s`;
+        drop.style.animationDuration = `${Math.random() * 2 + 1}s`;
+        rainContainer.appendChild(drop);
+      }
+    }
+
+    createRaindrops();
+  </script>
+</body>
+</html>
