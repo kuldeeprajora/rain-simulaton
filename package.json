@@ -1,0 +1,28 @@
+{
+  "name": "@kuldeeprajora/rain-simulation",
+  "version": "0.0.1",
+  "description": "Rain simulation using javascript and dom",
+  "main": "index.html",
+  "scripts": {
+    "test": "exit 0",
+    "start": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuldeeprajora/rain-simulaton.git"
+  },
+  "keywords": [
+    "rain",
+    "simulation",
+    "javascript"
+  ],
+  "author": "Kuldeep Rajora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kuldeeprajora/rain-simulaton/issues"
+  },
+  "homepage": "https://github.com/kuldeeprajora/rain-simulaton#readme",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
